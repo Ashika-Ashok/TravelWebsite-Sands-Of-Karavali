@@ -1,0 +1,147 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wave-text {
+    background: url("https://img.wattpad.com/ecfee4a908ebdc56662f27efa97cc4e41881515c/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f705657776a4e5f754a5f54667a513d3d2d3633302e313732326336653836303063373331373333343232353533313533332e676966") no-repeat center center  ; 
+  background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: rgb(9, 6, 38);
+    animation: moveText 3s infinite alternate;
+  }
+  
+  @keyframes moveText {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+  }
+  
+  /* Travel Form Styling */
+  #travel-form {
+    padding: 20px;
+  }
+  
+.description h2 {
+  margin: 0;
+}
+
+.description p {
+  margin: 5px 0 0;
+}
+
+
+
+  
+  #district-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .district-btn {
+    background-color: #74213a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .district-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Places List */
+  #places-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #places-list li {
+    background-color: #f8f9fa;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  #places-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Map Styling */
+  #map-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  #map {
+    height: 400px;
+    width: 100%;
+    background-color: #e0e0e0;
+  }
+  .place-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+}
+.place-popup {
+    max-width: 200px;
+}
+  
+
+.wave-text span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* styles.css */
+
+
+/* styles.css */
+/* body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+.slider-container {
+  
+  width: 30%;
+  padding-top: 100px;
+  max-width: 100px; /* Maximum width of the slider */
+  margin: 200px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slider img {
+  width: 30%; /* Adjust width relative to container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 600px) {
+  .slider img {
+      height: 50px; /* Adjust height for smaller screens */
+  }
+}

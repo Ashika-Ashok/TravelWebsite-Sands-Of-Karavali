@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sands of Karavali</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+     #district-icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1c27d; /* Sand color background */
+        }
+
+        /* Vertical alignment for buttons */
+        #district-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #fff2e1; /* Light background for the container */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Container shadow */
+        }
+
+        /* Base button styling */
+        .district-btn {
+            background-color: #ff6f61; /* Base color for the button */
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+        }
+
+        /* Glitter effect */
+        .district-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: skewX(-45deg);
+            filter: blur(5px);
+            opacity: 0;
+        }
+
+        /* Hover effect that triggers the glitter animation */
+        .district-btn:hover::before {
+            animation: shine 0.8s forwards;
+        }
+
+        /* Shine animation */
+        @keyframes shine {
+            0% {
+                left: -75%;
+                opacity: 0;
+            }
+            50% {
+                left: 50%;
+                opacity: 0.6;
+            }
+            100% {
+                left: 200%;
+                opacity: 0;
+            }
+        }
+
+        /* Glowing effect on hover */
+        .district-btn:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+    </style>
+    </head>
+    <body>
+
+
+      <!-- Header with moving animation -->
+      <div class="wave-text">
+        <h1>Sands Of Karavali</h1>
+       <h6>where the coast comes alive with rich history !!</h6>
+    </div>
+      <!-- Travel form -->
+      
+
+
+
+
+      <section id="travel-form">
+          <h3>Select District</h3>
+          <div id="district-icons">
+            <button class="district-btn" data-district="Udupi">Udupi</button>
+            <button class="district-btn" data-district="Dakshina Kannada">Dakshina Kannada</button>
+            <button class="district-btn" data-district="Uttara Kannada">Uttara Kannada</button>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Display sorted places based on crowd ratio -->
+      <section id="places-display">
+        <h3>Tourist Places Based on Crowd Density</h3>
+        <ul id="places-list"></ul>
+      </section>
+    
+      <!-- Map display section -->
+      <section id="map-container">
+        <h3>Map</h3>
+        <div id="map" style="height: 600px;"></div>
+      </section>
+    
+     
+   
+   
+    
+      <h1>Coastal Region Map with Historic Places</h1>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+   
+</head>
+<body>
+    
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <div id="places-container"></div> <!-- This is where the buttons will be added -->
+<div id="popup-container"></div> <!-- This is where the popup content will be shown -->
+
+
+    <div class="image-slider">
+      <div class="slider">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Sri-Krishna-Temple.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 1">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Malpe-Beach.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 2">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Kaup-Beach.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 3">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/corpration.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 4">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Ananteshwar-Temple.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 5">
+          <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Ananteshwar-Temple.jpg:cf-webp:w-848:h-551" alt="Tulu Culture Image 5"> 
+      </div>
+    <script src="index.js"></script>
+    
+    <script src="crowdData.js"></script>
+      <script src="script.js"></script>
+      <script src="index1.js"></script>
+      
+    </div>
+</body>
+</html>
